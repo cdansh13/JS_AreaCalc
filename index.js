@@ -1,28 +1,37 @@
-function rectShow(){
-    const rectForm = document.getElementById("rectForm");
-    const check = document.getElementById("check");
-    rectForm.style.display='block';
-    check.style.display='none';
-}
-function squShow(){
-    const squForm = document.getElementById("squForm");
-    const check = document.getElementById("check");
-    squForm.style.display='block';
-    check.style.display='none';
-}
-function triShow(){
+function operationSelector() {
+    console.log("Working!");
+    if (document.getElementById("op").value === "rectangle") {
+        const rectForm = document.getElementById("rectForm");
+        const check = document.getElementById("check");
+        const btnn = document.getElementById("btnn");
+        rectForm.style.display = 'block';
+        check.style.display = 'none';
+        btnn.style.display = 'none';
+
+    }
+    if (document.getElementById("op").value === "triangle") {
     const triForm = document.getElementById("triForm");
     const check = document.getElementById("check");
     triForm.style.display='block';
     check.style.display='none';
-}
+    btnn.style.display = 'none';
 
+    }
+    if (document.getElementById("op").value === "square") {
+    const squForm = document.getElementById("squForm");
+    const check = document.getElementById("check");
+    squForm.style.display='block';
+    check.style.display='none';
+    btnn.style.display = 'none';
+
+    }
+}
 function rect(){
-    const rectForm = document.getElementById("rectForm"); 
-    const num1 = document.getElementById("num1"); 
-    const num2 = document.getElementById("num2"); 
-    console.log(num1.value,num2.value)
-    output = num1.value*num2.value
+    const rectForm = document.getElementById("rectForm");
+    const num1 = document.getElementById("num1");
+    const num2 = document.getElementById("num2");
+    console.log(num1.value, num2.value)
+    output = num1.value * num2.value
     console.log(output)
     out = document.getElementById("out").innerHTML = output;
 }
